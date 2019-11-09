@@ -15,7 +15,7 @@ class WestWalletAPI:
     def _make_headers(self, data):
         timestamp = int(time.time())
         sign = hmac.new(self.secret_key.encode('utf-8'),
-                        "{}{}".format(timestamp, data or '')
+                        "{}{}".format(timestamp, json.dumps(data, ensure_ascii=False) or '')
                         .encode('utf-8'), hashlib.sha256).hexdigest()
         headers = {
             "X-API-KEY": self.api_key,
@@ -34,7 +34,7 @@ class WestWalletAPI:
 
     def _make_post_request(self, method_url: str, data: dict):
         response = requests.post("{}{}".format(self.base_url, method_url),
-                                 data=json.dumps(data),
+                                 data=json.dumps(data, ensure_ascii=False),
                                  headers=self._make_headers(data))
         self._check_errors(response)
         return response
