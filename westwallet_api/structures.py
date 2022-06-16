@@ -17,6 +17,7 @@ class Transaction:
     type: str
     blockchain_confirmations: int
     blockchain_hash: str
+    fee: str
 
 
 @dataclass
