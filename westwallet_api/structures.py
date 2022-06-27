@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional
 
 @dataclass
 class Balance:
@@ -14,10 +15,10 @@ class Transaction:
     dest_tag: str
     currency: str
     status: str
-    type: str
-    blockchain_confirmations: int
     blockchain_hash: str
     fee: str
+    type: Optional[str] = "send"
+    blockchain_confirmations: Optional[int] = 0
 
 
 @dataclass
