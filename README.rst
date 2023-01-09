@@ -4,7 +4,7 @@ westwallet-python-api
     :alt: PyPI
     :target: https://pypi.python.org/pypi/westwallet-api
 
-westwallet-python-api is a `WestWallet Public API <https://westwallet.info/api_docs>`_ wrapper for Python programming language. Use it for building payment solutions.
+westwallet-python-api is a `WestWallet Public API <https://westwallet.io/api_docs>`_ wrapper for Python programming language. Use it for building payment solutions.
 
 Installing
 ----------
@@ -61,7 +61,7 @@ Generate address example
 
 Documentation
 -------------
-* API: https://westwallet.info/api_docs
+* API: https://westwallet.io/api_docs
 
 
 Other languages
