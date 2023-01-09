@@ -7,7 +7,7 @@ import hmac
 import time
 
 class WestWalletAPI:
-    def __init__(self, api_key: str, secret_key: str, base_url: str = "https://api.westwallet.info"):
+    def __init__(self, api_key: str, secret_key: str, base_url: str = "https://api.westwallet.io"):
         self.api_key = api_key
         self.secret_key = secret_key
         self.base_url = base_url
