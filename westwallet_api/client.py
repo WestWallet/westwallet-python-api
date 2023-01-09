@@ -67,13 +67,14 @@ class WestWalletAPI:
 
     def create_withdrawal(self, currency: str, amount: str,
                           address: str, dest_tag: str = "",
-                          description: str = "") -> Transaction:
+                          description: str = "", priority: str = "medium") -> Transaction:
         data = {
             "currency": currency,
             "amount": amount,
             "address": address,
             "dest_tag": dest_tag,
-            "description": description
+            "description": description,
+            "priority": priority
         }
 
         method_url = "/wallet/create_withdrawal"
