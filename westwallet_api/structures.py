@@ -17,7 +17,7 @@ class Transaction:
     status: str
     blockchain_hash: str
     fee: str
-    label: str
+    label: Optional[str] = None
     type: Optional[str] = "send"
     blockchain_confirmations: Optional[int] = 0
 
